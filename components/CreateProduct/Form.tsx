@@ -36,6 +36,7 @@ export default function CreateProductForm() {
 
     const _product: any = {};
     keys.forEach((key: any) => {
+      if (key.toLowerCase() === "id") return;
       _product[key] = "";
     });
 
