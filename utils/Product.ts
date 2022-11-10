@@ -1,7 +1,9 @@
-export class Product {
-  private id: number;
-  private name: string;
-  private price: number;
+import { ProductDetails } from "./IProduct";
+
+export class Product implements ProductDetails {
+  readonly id: number;
+  name: string;
+  price: number;
 
   constructor(product: any) {
     this.id = product.id;

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/Product/Card";
 import { Product } from "../utils/Product";
+import Link from "next/link";
+import ProductHeaders from "../components/Product/Headers";
 
 export default function ViewProducts() {
   const [products, setProducts] = useState<any[]>([]);
@@ -22,6 +24,7 @@ export default function ViewProducts() {
   return (
     <div>
       Products
+      <ProductHeaders />
       {products.map((product) => {
         return (
           <ProductCard
@@ -31,6 +34,9 @@ export default function ViewProducts() {
           />
         );
       })}
+      <div>
+        <Link href="/">Go Back</Link>
+      </div>
     </div>
   );
 }

@@ -2,11 +2,13 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { Product } from "../../utils/Product";
 import CreateProductInput from "./Input";
 import Router from "next/router";
+import { ProductDetails } from "../../utils/IProduct";
 
-export default function CreateProductForm({ setProducts }: any) {
-  const [product, setProduct] = useState<any>({
+export default function CreateProductForm() {
+  const [product, setProduct] = useState<ProductDetails>({
     id: -1,
     name: "",
+    price: -1,
   });
 
   useEffect(() => {

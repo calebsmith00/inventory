@@ -3,7 +3,6 @@ import { useState } from "react";
 import CreateProductForm from "../components/CreateProduct/Form";
 
 const CreateProduct: NextPage = () => {
-  const [products, setProducts] = useState<any[]>([]);
   const [inProgress, setInProgress] = useState<boolean>(false);
 
   const createProduct = () => {
@@ -19,7 +18,7 @@ const CreateProduct: NextPage = () => {
         Create
       </button>
 
-      {inProgress && <CreateProductForm setProducts={setProducts} />}
+      {inProgress && <CreateProductForm />}
     </div>
   );
 };
